@@ -60,76 +60,75 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  let arrayStrings= []
-
-  for(let index of arrayNumeros){
-    if (index % 5 === 0 && index % 3 === 0) {
-        arrayStrings.push('fizzBuzz');
-    } else if (index % 3 === 0) {
-       arrayStrings.push('fizz');
-    } else if (index % 5 === 0) {
-       arrayStrings.push('buzz');
+  let arrayStrings = []
+  for (const index of arrayNumeros) {
+    if(index%3 === 0){
+      if(index%5 === 0){
+        arrayStrings.push("fizzBuzz")
+      }else{
+        arrayStrings.push("fizz")
+      }
+    }else if(index%5 === 0){
+      arrayStrings.push("buzz")
     }else{
-      arrayStrings.push('bug!');
+      arrayStrings.push("bug!") 
     }
   }
-  return arrayStrings;
+  return arrayStrings
 }
 
 // Desafio 9
 function encode(phrase) {
-  let palavra = ""
-  
-  for (let index =0;index < phrase.length;index++) {
-    if(phrase[index] === 'a'){
-      palavra += "1"
-    }else if(phrase[index] === 'e'){
-      palavra += "2"
-    }else if(phrase[index] === 'i'){
-      palavra += "3"
-    }else if(phrase[index] === 'o'){
-      palavra += "4"
-    }else if(phrase[index] === 'u'){
-      palavra += "5"
-    }else{
-      palavra += phrase[index]
+  let palavra = '';
+  for (let index = 0; index < phrase.length; index++) {
+    if (phrase[index] === 'a') {
+      palavra += '1';
+    } else if (phrase[index] === 'e') {
+      palavra += '2';
+    } else if (phrase[index] === 'i') {
+      palavra += '3';
+    } else if (phrase[index] === 'o') {
+      palavra += '4';
+    } else if (phrase[index] === 'u') {
+      palavra += '5';
+    } else {
+      palavra += phrase[index];
     }
   }
-  return palavra
+  return palavra;
 }
-function decode(phrase) { 
-  let palavra = ""
-  
-  for (let index =0;index < phrase.length;index++) {
-    if(phrase[index] === '1'){
-      palavra += "a"
-    }else if(phrase[index] == 2){
-      palavra += "e"
-    }else if(phrase[index] == 3){
-      palavra += "i"
-    }else if(phrase[index] == 4){
-      palavra += "o"
-    }else if(phrase[index] == 5){
-      palavra += "u"
-    }else{
-      palavra += phrase[index]
+function decode(phrase) {
+  let palavra = '';
+  for (let index = 0; index < phrase.length; index++) {
+    if (phrase[index] === '1') {
+      palavra += 'a';
+    } else if (phrase[index] == 2) {
+      palavra += 'e';
+    } else if (phrase[index] == 3) {
+      palavra += 'i';
+    } else if (phrase[index] == 4) {
+      palavra += 'o';
+    } else if (phrase[index] == 5) {
+      palavra += 'u';
+    } else {
+      palavra += phrase[index];
     }
   }
-  return palavra
+  return palavra;
 }
 // Desafio 10
 function techList(techName, personName) {
-  let list = []
-  let newArray = techName.sort()
+  let list = [];
+  let newArray = techName.sort();
 
-  if(techName.length > 0){
-    for (let index = 0; index < techName.length; index++) {
-      list.push({ tech: newArray[index], name: personName });
-    }
-  } else {
-    return "Vazio!";
-  }
-  return list
+ if(techName.length > 0){
+   for (let index = 0; index < techName.length; index++) {
+     list.push({ tech: newArray[index], name: personName });
+   }
+ } else {
+   return 'Vazio!'
+ }
+  return list;
 }
 
 module.exports = {
