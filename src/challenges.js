@@ -13,15 +13,14 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(splitString) {
+  return splitString.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  return arrayStrings[arrayStrings.length-1] + "," + ' ' + arrayStrings[0]
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
