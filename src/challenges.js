@@ -77,13 +77,46 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let palavra = ""
+  
+  for (let index =0;index < phrase.length;index++) {
+    if(phrase[index] === 'a'){
+      palavra += "1"
+    }else if(phrase[index] === 'e'){
+      palavra += "2"
+    }else if(phrase[index] === 'i'){
+      palavra += "3"
+    }else if(phrase[index] === 'o'){
+      palavra += "4"
+    }else if(phrase[index] === 'u'){
+      palavra += "5"
+    }else{
+      palavra += phrase[index]
+    }
+  }
+  return palavra
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) { 
+  let palavra = ""
+  
+  for (let index =0;index < phrase.length;index++) {
+    if(phrase[index] === '1'){
+      palavra += "a"
+    }else if(phrase[index] == 2){
+      palavra += "e"
+    }else if(phrase[index] == 3){
+      palavra += "i"
+    }else if(phrase[index] == 4){
+      palavra += "o"
+    }else if(phrase[index] == 5){
+      palavra += "u"
+    }else{
+      palavra += phrase[index]
+    }
+  }
+  return palavra
 }
-
 // Desafio 10
 function techList() {
   // seu código aqui
