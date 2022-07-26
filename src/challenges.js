@@ -118,8 +118,18 @@ function decode(phrase) {
   return palavra
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techName, personName) {
+  let list = []
+  let newArray = techName.sort()
+
+  if(techName.length > 0){
+    for (let index = 0; index < techName.length; index++) {
+      list.push({ tech: newArray[index], name: personName });
+    }
+  } else {
+    return "Vazio!";
+  }
+  return list
 }
 
 module.exports = {
