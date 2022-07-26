@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
@@ -19,7 +20,7 @@ function splitSentence(splitString) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length - 1] + ',' + ' ' + arrayStrings[0];
+  return `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -52,10 +53,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (Math.abs(catPosition1) > Math.abs(catPosition2)) {
     return 'cat2';
-  } else if (Math.abs(catPosition2) > Math.abs(catPosition1)) {
+  } if (Math.abs(catPosition2) > Math.abs(catPosition1)) {
     return 'cat1';
-  } else if (Math.abs(catPosition1) === Math.abs(catPosition2))
-    return 'os gatos trombam e o rato foge';
+  } if (Math.abs(catPosition1) === Math.abs(catPosition2)) return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -80,7 +80,7 @@ function fizzBuzz(arrayNumeros) {
 // Desafio 9
 function encode(phrase) {
   let palavra = '';
-  for (let index = 0; index < phrase.length; index++) {
+  for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === 'a') {
       palavra += '1';
     } else if (phrase[index] === 'e') {
@@ -122,7 +122,7 @@ function techList(techName, personName) {
   let newArray = techName.sort();
 
   if (techName.length > 0) {
-    for (let index = 0; index < techName.length; index++) {
+    for (let index = 0; index < techName.length; index += 1) {
       list.push({ tech: newArray[index], name: personName });
     }
   } else {
