@@ -19,11 +19,11 @@ function splitSentence(splitString) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length-1] + "," + ' ' + arrayStrings[0]
+  return arrayStrings[arrayStrings.length - 1] + ',' + ' ' + arrayStrings[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + ties;
+  let points = wins * 3 + ties;
   return points;
 }
 
@@ -60,21 +60,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  let arrayStrings = []
+  let arrayStrings = [];
   for (const index of arrayNumeros) {
-    if(index%3 === 0){
-      if(index%5 === 0){
-        arrayStrings.push("fizzBuzz")
-      }else{
-        arrayStrings.push("fizz")
+    if (index % 3 === 0) {
+      if (index % 5 === 0) {
+        arrayStrings.push('fizzBuzz');
+      } else {
+        arrayStrings.push('fizz');
       }
-    }else if(index%5 === 0){
-      arrayStrings.push("buzz")
-    }else{
-      arrayStrings.push("bug!") 
+    } else if (index % 5 === 0) {
+      arrayStrings.push('buzz');
+    } else {
+      arrayStrings.push('bug!');
     }
   }
-  return arrayStrings
+  return arrayStrings;
 }
 
 // Desafio 9
@@ -121,13 +121,13 @@ function techList(techName, personName) {
   let list = [];
   let newArray = techName.sort();
 
- if(techName.length > 0){
-   for (let index = 0; index < techName.length; index++) {
-     list.push({ tech: newArray[index], name: personName });
-   }
- } else {
-   return 'Vazio!'
- }
+  if (techName.length > 0) {
+    for (let index = 0; index < techName.length; index++) {
+      list.push({ tech: newArray[index], name: personName });
+    }
+  } else {
+    return 'Vazio!';
+  }
   return list;
 }
 
